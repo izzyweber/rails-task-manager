@@ -1,0 +1,21 @@
+<h1><%= @task.title  %></h1>
+<div class="details">
+   <h3><%= @task.details  %></h3>
+</div>
+
+<div class="done?">
+  <% if @task.completed == true %>
+    <p><i class="fas fa-check-square"></i> You have completed this task!</p>
+
+  <% else %>
+    <p><i class="far fa-square"></i> This task is not completed yet.</p>
+  <% end %>
+</div>
+<br><hr>
+
+<%= link_to "Update this task", edit_path %> <br><br>
+
+<%= link_to "Back to all tasks", tasks_path %>
+
+
+
